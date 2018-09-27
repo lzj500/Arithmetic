@@ -1,0 +1,21 @@
+{
+    "name": "htj/arithmetic",
+    "description": "字符串四元运算",
+    "type": "libaray",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "htj",
+            "email": "634390345@qq.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=7.0"
+    },
+    "autoload": {
+        "psr-4": {
+          "Arithmetic": "src/arithmetic/Arithmetic"
+    }
+  }
+}
