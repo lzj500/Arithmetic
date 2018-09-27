@@ -41,6 +41,7 @@ class ArithmeticCount
      */
     protected function doReplace($expr)
     {
+        $expr = str_replace(' ','' ,$expr);
         preg_match_all("/\d+(\.\d+)?%/",$expr,$arr);
         if(isset($arr[0]) && !empty($arr[0])){
             foreach ($arr[0] as $val){
