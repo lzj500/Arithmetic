@@ -16,5 +16,4 @@
     "autoload": {
         "psr-0": {"ArithmeticCount": ""}
     }
-  }
 }
