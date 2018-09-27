@@ -5,7 +5,7 @@
  * Date: 2018/9/27
  * Time: 11:06
  */
-namespace Arithmetic;
+namespace Arithmetic\;
 /**
 *  处理计算公式
 */

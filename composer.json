@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-          "Arithmetic": "src/arithmetic/Arithmetic"
+          "Arithmetic\\": "src/arithmetic/Arithmetic"
     }
   }
 }
