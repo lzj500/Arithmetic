@@ -1,6 +1,6 @@
 支持字符串运算符 + - * /  数字支持百分数 小数点
 
-$model = new Arithmetic();
+$model = new ArithmeticCount();
 
 $expr = '1+1+1+1*0.50%+50%';
 
