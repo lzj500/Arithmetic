@@ -5,11 +5,11 @@
  * Date: 2018/9/27
  * Time: 11:06
  */
-namespace Arithmetic;
+namespace Arithmetic\Count;
 /**
 *  处理计算公式
 */
-class ArithmeticClass
+class Count
 {
     //运算符栈,在栈里插入最小优先级的运算符，避免进入不到去运算符比较的循环里
     protected $opArr = ['#'];
