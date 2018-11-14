@@ -31,6 +31,7 @@ class ArithmeticCount
     protected $inop = false;
     protected $opNums = "";
     protected $expr="";
+    protected $bai=false;
     /**
      * Notes: 百分号转数字 查找替换
      * author 何腾骥
@@ -42,12 +43,20 @@ class ArithmeticCount
     protected function doReplace($expr)
     {
         $expr = str_replace(' ','' ,$expr);
+        $expr = str_replace('（','(' ,$expr);
+        $expr = str_replace('）',')' ,$expr);
+        $expr = str_replace(' ','' ,$expr);
         preg_match_all("/\d+(\.\d+)?%/",$expr,$arr);
+
         if(isset($arr[0]) && !empty($arr[0])){
             foreach ($arr[0] as $val){
                 $expr = str_replace($val,(float) $val /100 ,$expr);
             }
             return $expr;
+        }
+        if(preg_match("/100-\(/",$expr,$arr)){
+            $expr = str_replace('100-','' ,$expr);
+            $this->bai = true;
         }
         return $expr;
 
@@ -124,13 +133,11 @@ class ArithmeticCount
                 array_push($this->oprandArr,$result);
             }
         }
+
+        if($this->bai){
+            return 100 - $result;
+        }
         return $result;
     }
 
 }
-
-;
-
-
-
-
